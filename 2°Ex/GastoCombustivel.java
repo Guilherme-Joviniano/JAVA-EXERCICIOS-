@@ -15,8 +15,8 @@ public class GastoCombustivel{
         String tempo = line.readLine("Insira o Tempo Rodado em Horas: ");
         
         //int teste = Integer.parseInt("100"); first call the class after the method
-        double distancia =  Double.parseDouble(tempo) * Double.parseDouble(velocidade); 
-        double LitrosUsados = distancia/consumoMedio;
+        float distancia =  Float.parseFloat(tempo) * Float.parseFloat(velocidade); 
+        float LitrosUsados = distancia/consumoMedio;
 
         LitrosUsados = Math.round(LitrosUsados);
         System.out.println("Você rodou por " + tempo + " horas" + " em uma velocidade média de " + velocidade +" e percorreu uma distância total de " + distancia +"KM");
