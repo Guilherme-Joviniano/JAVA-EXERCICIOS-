@@ -1,6 +1,7 @@
 import javax.swing.JOptionPane;
 
-import jdk.nashorn.internal.runtime.regexp.joni.ast.ConsAltNode;
+// Try to understand better polymorphism and OOP in java clean code... 
+// Code in progress...
 
 
 abstract class Cartao{
