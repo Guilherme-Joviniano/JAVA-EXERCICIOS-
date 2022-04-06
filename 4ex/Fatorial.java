@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import jdk.nashorn.internal.ir.BreakableNode;
-
 class Fatorial {
 
     public Long value;
@@ -40,28 +38,27 @@ class Fatorial {
         // System.out.println(fatorial.value);
 
         
-        Scanner ler = new Scanner(System.in);
+        final Scanner ler = new Scanner(System.in);
         boolean isTrue = true;
 
-        while(isTrue){
+        while (isTrue) {
             System.out.println("Informe um numero positivo: ");
             int n = ler.nextInt();
             long fat = n;
-            if(n >= 0){
-                if(n == 0){
+            if (n >= 0) {
+                if (n == 0) {
                     fat++;
                 }
-                for(int i = 2; i<n; i++){
+                for (int i = 2; i < n; i++) {
                     fat = fat * i;
                 }
                 System.out.printf("%d! = %d \n", n, fat);
-            }
-            else{
-            System.out.println("Somente numeros positivos são aceitos! Digite Novamente");
+            } else {
+                System.out.println("Somente numeros positivos são aceitos! Digite Novamente");
             }
 
             System.out.println("Quer continuar ?");
-            String continuar = ler.next().toUpperCase().substring(0,1);
+            String continuar = ler.next().toUpperCase().substring(0, 1);
             if(continuar.equals("S")){
                 System.out.println("Continuando..");        
             }else{
