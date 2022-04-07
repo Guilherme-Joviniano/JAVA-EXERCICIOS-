@@ -27,12 +27,15 @@ class ValidarNumeroPrimo {
     }   
 
     List<Integer> Divisores(){
-        for(int i = 2; i < this.number; i++){
-            if(this.number % i == 0){
-                divisores.add(i);
+        if(!this.ePrimo){
+            for(int i = 2; i < this.number; i++){
+                if(this.number % i == 0){
+                    divisores.add(i);
+                }
             }
+            return divisores;
         }
-        return divisores;
+        return null;
     }
 
     public static void main(String[] args) {
