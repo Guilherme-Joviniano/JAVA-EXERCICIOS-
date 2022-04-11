@@ -1,11 +1,8 @@
 import java.util.Scanner;
 
 class ParOuImpar{
-
     
-
-    static void ParOuImpar(){
-        
+    static void isPar(){       
         Scanner scan = new Scanner(System.in);    
         System.out.println("Digite um numero real e positivo: ");
         int number = scan.nextInt();
@@ -14,7 +11,6 @@ class ParOuImpar{
             if(number < 0){
                 System.out.println("Digite um número positivo! ");
             }
-
             if(number % 2 == 0){
                 System.out.println("é par");
             }else{
@@ -22,7 +18,7 @@ class ParOuImpar{
             }
 
             System.out.println("Quer Continuar?");
-            final String isTrue = scan.next().substring(0, 1).toUpperCase();
+            String isTrue = scan.next().substring(0, 1).toUpperCase();
             if (isTrue.equals("S")) {
                 System.out.println("Digite outro um numero real e positivo: ");
                 number = scan.nextInt();
@@ -36,7 +32,7 @@ class ParOuImpar{
 
     public static void main( String[] args) {
         
-        ParOuImpar();
+        isPar();
 
     }
 

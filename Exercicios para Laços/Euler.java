@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 public class Euler {
     static void Euler(){
@@ -22,7 +21,6 @@ public class Euler {
             } 
         }
     }
-
     public static void main(String[] args) {
         Euler();
     }

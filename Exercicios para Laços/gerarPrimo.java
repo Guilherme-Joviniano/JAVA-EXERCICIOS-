@@ -16,7 +16,7 @@ public class gerarPrimo {
         numbers.add( (long) 5);
 
         long value;
-        for(long i = 1; i <= sequencia; i++){
+        for(long i = 1; i <= sequencia -3; i++){
             value = (6 * i) - 1;
             numbers.add(value);
         }

@@ -12,7 +12,6 @@ class ValidarNumeroPrimo {
         this.number = number;
         this.ePrimo = Validar();
         this.divisores = Divisores();
-        
     }
 
     boolean Validar(){
@@ -40,9 +39,19 @@ class ValidarNumeroPrimo {
 
     public static void main(String[] args) {
 
-        ValidarNumeroPrimo num1 = new ValidarNumeroPrimo(10);
-        System.out.println(num1.ePrimo);
-        System.out.println(num1.divisores);
-    
+        ValidarNumeroPrimo num1 = new ValidarNumeroPrimo(497);
+        
+        if(num1.ePrimo){
+            System.out.println("É primo");
+        } else{
+            System.out.println("Não é primo");
+        } 
+        
+        if(num1.divisores == null){
+            System.out.println(String.format("O numero %d já é primo", num1.number));
+        }else{
+            System.out.println(num1.divisores);
+        }
+        
     }
 }

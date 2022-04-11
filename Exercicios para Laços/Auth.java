@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.print.DocFlavor.STRING;
-
 public class Auth{
 
     String password;
@@ -16,30 +14,26 @@ public class Auth{
     void Authenticantion(){
         Scanner scan = new Scanner(System.in);
         while(authTries > 0){
-            
             System.out.println("Digite seu Login: ");
             String typedLogin = scan.next(); 
             System.out.println("Digite sua Senha: ");
             String typedPassword = scan.next();
-            
-            if(typedLogin != Login || typedPassword != password){
+            if(!Login.equals(typedLogin) || !password.equals(typedPassword)){
                 this.authTries--;
                 if(this.authTries == 0) break; 
-                System.out.printf("Login ou Senha Incorretos, tente novamente! você ainda têm %d têntativas \n",this.authTries);
+                System.out.printf("Login ou Senha Incorretos, tente novamente! você ainda têm %d têntativas \n", this.authTries);
                 Authenticantion();
             }else{
                 System.out.println("Autenticado!");
                 break;
             }
         }
-        System.out.println("Tentativas excedidas!");
+        
     }
     public static void main(String[] args) {
-        Auth user1 =  new Auth("Guilherme", "123");
-
+        Auth user1 =  new Auth("guilherme", "123");
+        System.out.println(user1.Login + user1.password);
         user1.Authenticantion();
-
-
     }
 
 }
