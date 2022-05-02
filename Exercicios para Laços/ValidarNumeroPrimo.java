@@ -17,7 +17,8 @@ class ValidarNumeroPrimo {
     boolean Validar(){
         if(this.number < 0) return false;
         if(this.number == 1 || this.number == 0) return true;
-        for(int i = 2; i < this.number; i++){
+        
+        for(int i = 2; i <= this.number/2; i++){
             if(this.number % i == 0){
                 return false;
             }
@@ -27,7 +28,7 @@ class ValidarNumeroPrimo {
 
     List<Integer> Divisores(){
         if(!this.ePrimo){
-            for(int i = 2; i < this.number; i++){
+            for(int i = 2; i <= this.number/2; i++){
                 if(this.number % i == 0){
                     divisores.add(i);
                 }
@@ -39,7 +40,7 @@ class ValidarNumeroPrimo {
 
     public static void main(String[] args) {
 
-        ValidarNumeroPrimo num1 = new ValidarNumeroPrimo(497);
+        ValidarNumeroPrimo num1 = new ValidarNumeroPrimo(24);
         
         if(num1.ePrimo){
             System.out.println("É primo");

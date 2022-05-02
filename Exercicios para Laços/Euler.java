@@ -11,7 +11,7 @@ public class Euler {
             Float e = 1 + (1/x);
             e = (float) Math.pow(e ,x);
             System.out.println(e);
-
+            
             System.out.println("Quer Continuar?");
             String isTrue = scan.next().substring(0,1).toUpperCase();
             

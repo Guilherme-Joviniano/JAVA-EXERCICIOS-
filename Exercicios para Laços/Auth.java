@@ -4,7 +4,7 @@ public class Auth{
 
     String password;
     String Login;
-    int authTries = 3;
+     int authTries = 3;
 
     public Auth(String Login, String password){
         this.Login = Login;
